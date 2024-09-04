@@ -1,0 +1,165 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background change</title>
+</head>
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 600px;
+    }
+</style>
+<body>
+    <div id="background"></div>
+    <button id="btn">click me</button>
+    <script>
+        color=()=>{
+            let hexNumbers="0123456789ABCD";
+            let hexColorCode="#"
+            for (let i=0;i<6;i++) {
+                hexColorCode +=hexNumbers[Math.floor(Math.random()*14)];
+            }
+            return hexColorCode;
+        }
+        let btn=document.getElementById("btn");
+            btn.addEventListener("click",()=>{
+            document.body.style.backgroundColor=color();
+            document.getElementById("colorCode").innerHTML=color();
+            })
+    </script>
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quotes</title>
+    <style>
+        body {
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            height:100vh;
+            margin:0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        button {
+            font-size:20px;
+            padding:10px 20px;
+            margin-bottom:20px;
+            cursor:pointer;
+        }
+        #quotes {
+            font-size:24px; 
+            font-weight:bold; 
+            margin-top:20px; 
+            text-align:center; 
+        }
+        #colorCode {
+            font-size:18px; 
+            text-align:center; 
+            margin-bottom:20px; 
+        }
+    </style>
+</head>
+ <body>
+    <div id="colorCode"></div>  
+    <div id="quotes"></div>
+    <button id="btn">Click me for a quote</button>
+    <script>
+         color=()=>{
+            let hexNumbers="0123456789ABCD";
+            let hexColorCode="#"
+            for (let i=0;i<6;i++){
+                hexColorCode +=hexNumbers[Math.floor(Math.random()*14)];
+            }
+            return hexColorCode;
+        }
+        const quotes=[
+             "Practice makes mans perfect",
+             "Failure is the stepping stone to success",
+             "Success is a journey,not a destination",
+             "You dont have to be great to start,but you have start to be great",
+             "if u want to live a happy life tie it to a goal, not to people",
+             
+        ];
+        const randomQuote=()=>{
+            let res='';
+            for (let i=0;i<quotes.length;i++){ 
+                let Index=Math.floor(Math.random()*quotes.length);
+                res=quotes[Index];
+            }
+            return res;
+        };
+            let btn=document.getElementById("btn");
+            btn.addEventListener("click",()=>{
+            document.body.style.backgroundColor=color();
+            document.getElementById("colorCode").innerHTML=color();
+            document.getElementById("quotes").innerHTML=randomQuote();
+        });
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let div1=document.createElement("div");
+    document.body.appendChild(div1);
+    div1.style.border="2px solid transparent";
+    div1.style.width="150px";
+    div1.style.height="300px"
+    div1.style.borderRadius="30px";
+    div1.style.borderColor="black"
+    div1.style.display="flex";
+    div1.style.flexDirection="column";
+    div1.style.alignItems="center";
+    div1.style.padding="20px";
+    // div1.style.backgroundColor="pink";
+    div1.style.boxShadow="2px 2px 20px";
+
+    let ph=document.createElement("img");
+    div1.appendChild(ph);
+    ph.setAttribute("src","./kavitha.jpg");
+    ph.style.width="50%";
+    ph.style.height="55%";
+    ph.style.borderRadius="40px"
+
+    let nm=document.createElement("h3");
+    div1.appendChild(nm);
+    nm.innerHTML=" Name:R.Kavitha";
+
+    let ag=document.createElement("p");
+    div1.appendChild(ag);
+    ag.innerHTML="Mbl:8766560439";
+
+    let bg=document.createElement("p");
+    div1.appendChild(bg);
+    bg.innerHTML="10000 coders"
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
